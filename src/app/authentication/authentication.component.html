@@ -1,0 +1,25 @@
+<div class="h-100 d-flex align-items-center justify-content-center">
+  <div class="token-form">
+    <form (ngSubmit)="submit()">
+      <h1>Connect</h1>
+      <div class="mb-3 form-floating">
+        <input type="text" class="form-control" placeholder="" [formControl]="addressFormControl" [ngClass]="addressFormControlClass">
+        <label>Address</label>
+      </div>
+      <div class="mb-3 form-floating">
+        <input type="password" class="form-control" placeholder="" [formControl]="tokenFormControl" [ngClass]="tokenFormControlClass">
+        <label>Token</label>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="busy">
+        @if (busy) {
+          <div class="spinner-border spinner-border-sm me-2" role="status">
+            <span class="visually-hidden">Connecting...</span>
+          </div>
+        } @else {
+          <i class="bi bi-box-arrow-in-left me-2"></i>
+        }
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

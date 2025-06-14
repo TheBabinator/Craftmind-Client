@@ -1,1 +1,50 @@
-<ng-content></ng-content>
+<div class="d-flex flex-nowrap h-100">
+  <div class="d-flex flex-column flex-shrink-0 p-3 sidebar">
+    <span class="fs-4">
+      <i class="bi bi-motherboard me-2"></i>
+      Craftmind
+    </span>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li>
+        <a class="d-flex nav-link" [routerLink]="'/dashboard'" [routerLinkActive]="'active'">
+          <i class="bi bi-speedometer2 me-2"></i>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a class="d-flex align-items-center nav-link" [routerLink]="'/bridge'" [routerLinkActive]="'active'">
+          <i class="bi bi-broadcast-pin me-2"></i>
+          Bridge
+        </a>
+      </li>
+      <li>
+        <a class="d-flex align-items-center nav-link" [routerLink]="'/levels'" [routerLinkActive]="'active'">
+          <i class="bi bi-pin-map me-2"></i>
+          Levels
+          <span class="badge text-bg-secondary ms-auto">3</span>
+        </a>
+      </li>
+      <li>
+        <a class="d-flex align-items-center nav-link" [routerLink]="'/turtles'" [routerLinkActive]="'active'">
+          <i class="bi bi-robot me-2"></i>
+          Turtles
+          <span class="badge text-bg-secondary ms-auto">7/12</span>
+        </a>
+      </li>
+      <li>
+        <a class="d-flex align-items-center nav-link" [routerLink]="'/alerts'" [routerLinkActive]="'active'">
+          <i class="bi bi-exclamation-triangle me-2"></i>
+          Alerts
+          <span class="badge text-bg-danger ms-auto">5</span>
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <button class="btn btn-danger" (click)="exit()">
+      <i class="bi bi-box-arrow-right me-2"></i>
+      Exit
+    </button>
+  </div>
+  <ng-content></ng-content>
+</div>
